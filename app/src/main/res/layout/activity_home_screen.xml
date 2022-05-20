@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/homescreen_bg"
+        android:padding="10dp"
+        tools:context=".view.HomeScreen">
+
+        <ImageView
+            android:id="@+id/img_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_svg_menu"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txt_tittle"
+            app:layout_constraintBottom_toBottomOf="@id/txt_tittle"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_tittle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/home_screen_tittle"
+            android:textSize="@dimen/tittle_txt_Size"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/img_menu"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_sub_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pending_profiles_with_me"
+            android:textSize="@dimen/sub_tittle_txt_size"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_tittle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 New"
+            android:textColor="@color/white"
+            android:background="@drawable/white_curved_rectangle"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_tittle"
+            app:layout_constraintBottom_toBottomOf="@id/txt_sub_tittle"
+            app:layout_constraintLeft_toRightOf="@id/txt_sub_tittle"
+            tools:ignore="MissingConstraints"
+            app:drawableTint="@color/white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_profilesData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_sub_tittle"
+            tools:ignore="MissingConstraints" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            layout="@layout/layout_recycler_view_item"
+            app:layout_constraintTop_toBottomOf="@id/txt_sub_tittle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

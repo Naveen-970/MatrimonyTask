@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--<stroke android:width="2dp"
+        android:color="@color/primary"/>-->
+    <gradient
+        android:startColor="@color/gesture_screen_top_left"
+        android:endColor="@color/gesture_screen_bottom_right"
+        android:angle="0"/>
+</shape>

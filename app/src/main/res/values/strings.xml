@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MatrimonyTask</string>
+
+    //Home Screen Texts
+    <string name="home_screen_tittle">My Matches</string>
+    <string name="pending_profiles_with_me">8 Profiles pending with me</string>
+
+    <string name="txt_yes">Yes</string>
+    <string name="txt_no">No</string>
+
+</resources>
